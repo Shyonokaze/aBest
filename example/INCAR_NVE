@@ -1,0 +1,51 @@
+system = MoS2 
+ 
+!start
+ISTART = 0
+ICHARG = 2
+
+!prec
+ISMEAR = 0 
+SIGMA = 0.05
+LREAL = A
+PREC = L
+EDIFF  = 1e-4
+LELF = .FALSE.
+#ENCUT = 400.000 
+
+!relax
+ISIF = 2
+#EDIFFG = -0.01
+
+!algo
+NELM = 200
+NELMIN = 4
+ALGO = vF
+
+!parallel
+IRMMD = 4
+NSIM = 4
+NPAR = 4
+
+!output
+LCHARG = F
+LWAVE = F
+LELF = F
+
+!method
+#LUSE_VDW = .TRUE.
+#GGA = MK
+#PARAM1 = 0.1234
+#PARAM2 = 1.0000
+#AGGAC = 0.0000
+
+!spin
+#ISPIN = 2
+
+!MD
+IBRION = 0
+NSW = 800
+POTIM = 1.0
+SMASS = -3
+TEBEG = 300
+TEEND = 300
